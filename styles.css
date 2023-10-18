@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar */
+
+body>header {
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+body>header>h1 {
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Menu */
+
+#menu-btn {
+    display: none;
+    position: relative;
+}
+
+#menu-btn:hover #menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    z-index: 999;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#menu {
+    display: none;
+}
+
+/* Main */
+
+body>main {
+    padding: 10px;
+}
+
+#title {
+    text-decoration: underline;
+    padding: 10px 0;
+}
+
+.column {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.column p {
+    border: 1px dotted gray;
+    padding: 10px;
+}
+
+/* Figure */
+figure {
+    display: grid;
+    place-items: center;
+    padding: 10px 0;
+}
+
+img {
+    width: auto;
+    height: auto;
+}
+
+/* Article */
+article {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: start;
+    background-color: rgb(228, 212, 212);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+article>section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+
+/* Footer */
+
+footer {
+    display: grid;
+    place-items: center;
+    padding: 10px 0;
+    gap: 10px;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#submit-btn {
+    text-align: center;
+}
+
+
+/* Mobile screen */
+@media (max-width: 487px) {
+    body>header>h1 {
+        font-size: large;
+    }
+
+    .column {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+    }
+
+    #desktop-navbar {
+        display: none;
+    }
+
+    #menu-btn {
+        display: block;
+    }
+}
